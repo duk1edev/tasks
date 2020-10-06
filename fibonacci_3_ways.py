@@ -5,6 +5,17 @@ def fibonacci_rec(n):
     return fibonacci(n - 1) + fibonacci(n - 2)
 
 
+# 1 optimize recursion
+from functools import lru_cache
+
+
+@lru_cache(None)
+def fibonacci(n):
+    if n in [0, 1]:
+        return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+
 # 2 memory safe mode
 def fibonacci(n):
     a = 1
