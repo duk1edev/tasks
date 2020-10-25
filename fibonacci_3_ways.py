@@ -47,6 +47,25 @@ def fibonacci_dyno(n):
         FibArray.append(temp_fib)
         return temp_fib
 
+# even fibonacci
+
+
+def fib_even(n):
+    a, b = 1, 1
+    fib_even_arr = []
+
+    for i in range(2, 100):
+        c = a + b
+        a = b
+        b = c
+        if b % 2 == 0:
+            fib_even_arr.append(b)
+
+    return fib_even_arr[:n:]
+
+
+print(fib_even(6))
+
 
 fibonacci(70)  # 190392490709135)
 fibonacci(60)  # 1548008755920
